@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abuja Chamber of commerce | Home</title>
+    <meta name="description"
+        content="The official website of the Abuja Chamber of Commerce. Supporting local businesses, fostering networking opportunities, and driving economic growth in Abuja, Nigeria.">
+    <meta name="author" content="Godfrey Hogan Eyo">
+
+    <meta property="og:title" content="Abuja Chamber of Commerce">
+    <meta property="og:description"
+        content="The Abuja Chamber of Commerce supports local businesses, promotes networking opportunities, and drives economic growth in the Abuja community.">
+    <meta property="og:image" content="https://itzfrey.github.io/wdd231/chamber/images/cbn.webp">
+    <meta property="og:url" content="https://itzfrey.github.io/wdd231/chamber/index.html">
+
+    <link rel="icon" href="chamber-favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlight.js" defer></script>
+    <!-- <script src="scripts/darkmode.js" defer></script> -->
+     <script src="scripts/events.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/commerce-icon.svg" alt="site logo" width="70" height="70">
+        <span>Abuja Chamber of Commerce</span>
+        <img class="dark-mood" src="images/dark-mood-icon.svg" alt="Dark mood" width="1" height="1">
+        <button id="ham-btn" class="hamburger" aria-label="hamburger"></button>
+    </header>
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="discover.html">Discover</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="hero">
+            <img src="images/cbn.webp" alt="CBN Building" width="900" height="600" loading="lazy">
+            <a href="join.html" class="keynote-btn">Join the Chamber</a>
+        </div>
+        <h1>Home</h1>
+        <div class="info-panel">
+            <div>
+                <div class="panel-heading">
+                    <h2>Events</h2>
+                </div>
+
+                <div class="event-content scrollable" id="events-container">
+                    
+                </div>
+                <a class="view-all-events" href="directory.html#events">View All Events</a>
+                    
+            </div>
+            <section>
+                <div class="panel-heading">
+                    <h2>Current Weather</h2>
+                </div>
+                <div class="weather-info">
+                    <div>
+                        <img id="graphic" src="images/weather-icon.svg" alt="" width="100" height="100">
+
+                    </div>
+                    <div>
+                        <p class="temperature"></p>
+                        <p class="description"></p>
+                        <p class="high"></p>
+                        <p class="low"></p>
+                        <p class="humidity"></p>
+                        <p class="sunrise"></p>
+                        <p class="sunset"></p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="panel-heading">
+                    <h2>Weather Forecast</h2>
+                </div>
+                <div class="forecast"></div>
+            </section>
+        </div>
+        <div class="members">
+            <h2>Businesses</h2>
+            <div class="spotlights">
+                <div class="spotlight-container"></div>
+                <a class="view-all-btn" href="directory.html#directory">View All Businesses</a>
+            </div>
+            
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <p><strong>Abuja Chamber of Commerce</strong></p>
+            <p>17 Job Ojottah Avenue</p>
+            <p>Maitama, Abuja, Nigeria</p>
+            <p>info@abujacc.org</p>
+            <p>(234) 907-977-0845</p>
+        </div>
+
+        <div class="social">
+            <a href="https://www.facebook.com/share/1CJKiAhdNP/" target="_blank"><img src="images/facebook.svg"
+                    alt="facebook" width="16" height="16"></a>
+            <a href="https://github.com/itzfrey" target="_blank"><img src="images/github-icon.svg" alt="github profile"
+                    width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/godfrey-eyo-66aa3a251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium="
+                target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+            <a href="https://x.com/itzfrey?t=OYMBeGasE94Wpk3QaPZftA&s=09" target="_blank"><img
+                    src="images/twitter-x.svg" alt="twitter" width="16" height="16"></a>
+        </div>
+        <div>
+            <p>WDD231 Class Project</p>
+            <p>Godfrey Hogan Eyo</p>
+            <a target="_blank" href="siteplan.html">Site Plan</a>
+            <p>&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
+            <p id="lastModified"></p>
+        </div>
+
+    </footer>
+</body>
+
+</html>
