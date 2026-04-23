@@ -28,7 +28,6 @@
   }
   .navigation ul li a:hover {
     background: rgba(255,255,255,0.05);
-    border-bottom-color: var(--gold-bright);
     border-left-color: transparent;
   }
   .navigation ul li.current a {
@@ -183,4 +182,22 @@
   .home-hero-content h1 { font-size: 3.2rem; }
 
   .hero { height: 280px; }
+}
+
+/* ── Featured Section responsive ──────────────────────────── */
+@media (min-width: 600px) {
+  .featured-section { padding: 40px 24px 56px; }
+  .section-title { font-size: 1.8rem; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .featured-section { padding: 48px 40px 64px; }
+  .section-title { font-size: 2rem; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+}
+
+@media (min-width: 1200px) {
+  .featured-section { padding: 52px 60px 72px; }
+  .projects-grid { grid-template-columns: repeat(4, 1fr); }
 }
