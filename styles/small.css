@@ -152,6 +152,9 @@ body.dark-mode .dark-mood {
   overflow: hidden;
   transition: max-height 0.35s ease;
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: sticky;
+  top: 64px;
+  z-index: 99;
 }
 .navigation.show { max-height: 300px; }
 
@@ -175,8 +178,10 @@ body.dark-mode .dark-mood {
 .navigation ul li a:hover {
   background: rgba(255,255,255,0.06);
   color: var(--light-gold);
+  border-left-color: var(--alice-blue);
 }
 .navigation ul li.current a {
+  color: var(--light-gold);
   border-left-color: var(--light-gold);
   background: rgba(240,180,41,0.08);
 }
@@ -660,6 +665,7 @@ body.dark-mode .cards > div:hover { background: rgba(221,164,72,0.08); }
   border: none; border-radius: var(--radius-md); box-shadow: var(--shadow-lg);
   padding: 28px 24px; max-width: 360px; width: 90%;
   background: var(--bg-card); color: var(--text-body); position: relative;
+  margin: auto;
 }
 .modal::backdrop { background: rgba(0,20,50,0.55); backdrop-filter: blur(3px); }
 .modal h2 {
