@@ -1,71 +1,79 @@
+/* ============================================================
+   ABUJA CHAMBER OF COMMERCE — larger.css (tablet + desktop)
+   ============================================================ */
 
+/* ── Tablet: 600px+ ────────────────────────────────────────── */
 @media (min-width: 600px) {
 
-  /* Header */
   header span { font-size: 1.15rem; }
 
-  /* Nav — horizontal */
+  /* Nav: horizontal, centered */
   .navigation {
     max-height: none !important;
     overflow: visible;
     background: var(--nav-bg);
     border-bottom: 2px solid rgba(255,255,255,0.08);
   }
-
   .navigation ul {
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 0;
     padding: 0 24px;
   }
-
   .navigation ul li a {
     border-left: none;
     border-bottom: 3px solid transparent;
     padding: 13px 18px 10px;
     font-size: 0.82rem;
   }
-
   .navigation ul li a:hover {
     background: rgba(255,255,255,0.05);
     border-bottom-color: var(--gold-bright);
     border-left-color: transparent;
   }
-
   .navigation ul li.current a {
-    border-bottom-color: var(--gold);
+    border-bottom-color: var(--light-gold);
     border-left-color: transparent;
     background: rgba(240,180,41,0.07);
   }
 
-  /* Hide hamburger on tablet+ */
   .hamburger { display: none; }
 
-  /* Hero */
-  .hero { max-height: 420px; }
-  .hero img { height: 420px; }
+  /* Home hero */
+  .home-hero { height: 440px; }
+  .home-hero-content h1 { font-size: 2.2rem; }
+  .home-hero-content p { font-size: 0.95rem; max-width: 460px; }
 
-  /* Info panel — 2 cols */
+  /* Directory hero */
+  .hero { height: 220px; }
+
+  /* Mission strip: row layout */
+  .mission-strip {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px;
+  }
+  .mission-strip p { max-width: 55%; }
+  .mission-stats { gap: 32px; }
+  .stat strong { font-size: 1.8rem; }
+
+  /* Info panel: 2 cols */
   .info-panel {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 24px;
     gap: 18px;
   }
+  /* Events span full width */
+  .info-panel .events,
+  .info-panel > div:first-child { grid-column: 1 / -1; }
 
-  .info-panel section:first-child,
-  .info-panel > div:first-child {
-    grid-column: 1 / -1;
-  }
-
-  /* Members grid */
+  /* Members */
   .members { padding: 24px; }
+  .spotlight-container { grid-template-columns: repeat(2, 1fr); }
 
-  .spotlight-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Discover places - 2 cols */
+  /* Discover: 2 cols */
   .allPlaces {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -73,12 +81,10 @@
     padding: 24px;
     align-items: start;
   }
-  .allPlaces h2 {
-    grid-column: 1 / -1;
-    display: block;
-  }
+  .allPlaces h2 { grid-column: 1 / -1; }
+  .allPlaces > div { margin-bottom: 0; }
 
-  /* Join - side by side */
+  /* Join: side by side */
   .join-layout {
     flex-direction: row;
     align-items: flex-start;
@@ -87,7 +93,7 @@
   .join-form { flex: 1; }
   .cards { flex: 0 0 280px; }
 
-  /* Footer — 3 cols */
+  /* Footer: 3 cols */
   footer {
     flex-direction: row;
     justify-content: space-between;
@@ -95,123 +101,63 @@
     padding: 40px 32px 28px;
     gap: 32px;
   }
-
   footer > div { flex: 1; }
   .social { flex: 0 0 auto; }
 }
 
+/* ── Desktop: 900px+ ───────────────────────────────────────── */
 @media (min-width: 900px) {
 
-  /* Header */
-  header {
-    padding: 12px 40px;
-    gap: 18px;
-  }
+  header { padding: 12px 40px; gap: 18px; }
   header img:first-child { width: 52px; height: 52px; }
   header span { font-size: 1.3rem; }
 
-  /* Nav */
-  .navigation ul {
-    padding: 0 40px;
-    gap: 4px;
-  }
+  .navigation ul { padding: 0 40px; gap: 6px; }
+  .navigation ul li a { font-size: 0.87rem; padding: 14px 24px 11px; }
 
-  .navigation ul li a {
-    font-size: 0.87rem;
-    padding: 14px 22px 11px;
-  }
+  /* Home hero */
+  .home-hero { height: 520px; }
+  .home-hero-content h1 { font-size: 2.8rem; }
+  .home-hero-content p { font-size: 1rem; max-width: 520px; }
 
-  /* Hero */
-  .hero { max-height: 520px; }
-  .hero img { height: 520px; }
+  /* Directory hero */
+  .hero { height: 260px; }
+  .hero-label h2 { font-size: 1.6rem; }
 
-  .keynote-btn {
-    font-size: 0.92rem;
-    padding: 14px 36px;
-    bottom: 40px;
-  }
+  main > h1 { font-size: 2rem; padding: 28px 40px 8px; margin: 0 40px 0; }
 
-  /* Page title */
-  main > h1 {
-    font-size: 2rem;
-    padding: 28px 40px 8px;
-    margin: 0 40px 0;
-  }
-
-  /* Info panel — 3 cols */
+  /* Info panel: 3 cols — events left, weather cols right */
   .info-panel {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.3fr 1fr 1fr;
     padding: 28px 40px;
     gap: 22px;
   }
-
-  .info-panel section:first-child,
-  .info-panel > div:first-child {
-    grid-column: auto;
-  }
-
-  /* Keep events full width */
+  /* Events: tall left column */
   .info-panel .events,
   .info-panel > div:first-child {
-    grid-column: 1 / -1;
-  }
-
-  /* 2-column weather layout */
-  .info-panel section:nth-child(2),
-  .info-panel section:nth-child(3) {
-    grid-column: auto;
-  }
-
-  .info-panel > div:first-child {
     grid-column: 1;
+    grid-row: 1 / 3;
   }
+  /* Weather panels: right two cells */
+  .info-panel section:nth-child(2) { grid-column: 2; grid-row: 1; }
+  .info-panel section:nth-child(3) { grid-column: 3; grid-row: 1; }
 
-  /* Re-layout: events left, weather middle/right */
-  .info-panel {
-    grid-template-columns: 1.2fr 1fr 1fr;
-  }
+  .directory-toolbar { padding: 14px 40px; }
 
-  /* Events section */
-  .info-panel .events { grid-column: 1; grid-row: 1 / 3; }
+  .members { padding: 28px 40px; }
+  .members-container { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .spotlight-container { grid-template-columns: repeat(3, 1fr); }
 
-  /* Members */
-  .members {
-    padding: 28px 40px;
-  }
-
-  .members-container {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  }
-
-  /* Spotlights */
-  .spotlight-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Discover */
-  .allPlaces {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 28px 40px;
-  }
-
+  .allPlaces { grid-template-columns: repeat(3, 1fr); padding: 28px 40px; }
   .intro { padding: 56px 40px 42px; }
   .intro h1 { font-size: 2.6rem; }
   .intro .lead { font-size: 1rem; }
 
-  /* Join */
-  .join-layout {
-    padding: 32px 40px;
-    gap: 32px;
-  }
+  .join-layout { padding: 32px 40px; gap: 32px; }
 
-  /* Thank you */
-  .thankyou-container {
-    margin: 60px auto;
-    padding: 44px 40px;
-  }
+  .thankyou-container { margin: 60px auto; padding: 44px 40px; }
   .thankyou-container h1 { font-size: 1.6rem; }
 
-  /* Footer */
   footer { padding: 48px 40px 32px; }
 }
 
@@ -221,27 +167,20 @@
   body { max-width: 1440px; margin: 0 auto; }
 
   header { padding: 14px 60px; }
-
   .navigation ul { padding: 0 60px; }
+  .navigation ul li a { padding: 14px 28px 11px; }
 
-  main > h1 {
-    font-size: 2.2rem;
-    padding: 32px 60px 10px;
-    margin: 0 60px 0;
-  }
-
+  main > h1 { font-size: 2.2rem; padding: 32px 60px 10px; margin: 0 60px 0; }
   .info-panel { padding: 32px 60px; gap: 24px; }
+  .directory-toolbar { padding: 14px 60px; }
   .members { padding: 32px 60px; }
   .allPlaces { padding: 32px 60px; grid-template-columns: repeat(4, 1fr); }
   .intro { padding: 64px 60px 48px; }
   .join-layout { padding: 36px 60px; }
   footer { padding: 52px 60px 36px; }
 
-  .hero { max-height: 580px; }
-  .hero img { height: 580px; }
+  .home-hero { height: 580px; }
+  .home-hero-content h1 { font-size: 3.2rem; }
 
-  .spotlight-container {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 900px;
-  }
+  .hero { height: 280px; }
 }

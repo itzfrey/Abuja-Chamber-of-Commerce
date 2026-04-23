@@ -19,11 +19,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
@@ -32,16 +29,16 @@
     <script src="scripts/date.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
-    <!-- <script src="scripts/darkmode.js" defer></script> -->
-     <script src="scripts/events.js" defer></script>
+    <script src="scripts/darkmode.js" defer></script>
+    <script src="scripts/events.js" defer></script>
 </head>
 
 <body>
     <header>
         <img src="images/commerce-icon.svg" alt="site logo" width="70" height="70">
         <span>Abuja Chamber of Commerce</span>
-        <img class="dark-mood" src="images/dark-mood-icon.svg" alt="Dark mood" width="1" height="1">
-        <button id="ham-btn" class="hamburger" aria-label="hamburger"></button>
+        <img class="dark-mood" src="images/dark-mood-icon.svg" alt="Toggle dark mode" width="28" height="28">
+        <button id="ham-btn" class="hamburger" aria-label="Toggle navigation"></button>
     </header>
     <nav id="nav-bar" class="navigation">
         <ul>
@@ -52,22 +49,42 @@
         </ul>
     </nav>
     <main>
-        <div class="hero">
-            <img src="images/cbn.webp" alt="CBN Building" width="900" height="600" loading="lazy">
-            <a href="join.html" class="keynote-btn">Join the Chamber</a>
+        <!-- Home-specific hero with headline overlay -->
+        <div class="home-hero">
+            <img src="images/cbn.webp" alt="CBN Building Abuja" width="900" height="600" loading="lazy">
+            <div class="home-hero-content">
+                <h1>Empowering Abuja's <span>Business Community</span></h1>
+                <p>Connect, grow, and thrive with hundreds of businesses across Nigeria's capital.</p>
+                <a href="join.html" class="keynote-btn">Join the Chamber</a>
+            </div>
         </div>
-        <h1>Home</h1>
+
+        <!-- Mission strip -->
+        <div class="mission-strip">
+            <p>The Abuja Chamber of Commerce is the leading voice for business in Nigeria's capital — driving economic growth, fostering partnerships, and connecting entrepreneurs with opportunity.</p>
+            <div class="mission-stats">
+                <div class="stat">
+                    <strong>500+</strong>
+                    <span>Members</span>
+                </div>
+                <div class="stat">
+                    <strong>20+</strong>
+                    <span>Annual Events</span>
+                </div>
+                <div class="stat">
+                    <strong>15</strong>
+                    <span>Years Active</span>
+                </div>
+            </div>
+        </div>
+
         <div class="info-panel">
             <div>
                 <div class="panel-heading">
-                    <h2>Events</h2>
+                    <h2>Upcoming Events</h2>
                 </div>
-
-                <div class="event-content scrollable" id="events-container">
-                    
-                </div>
+                <div class="event-content scrollable" id="events-container"></div>
                 <a class="view-all-events" href="directory.html#events">View All Events</a>
-                    
             </div>
             <section>
                 <div class="panel-heading">
@@ -76,7 +93,6 @@
                 <div class="weather-info">
                     <div>
                         <img id="graphic" src="images/weather-icon.svg" alt="" width="100" height="100">
-
                     </div>
                     <div>
                         <p class="temperature"></p>
@@ -96,16 +112,16 @@
                 <div class="forecast"></div>
             </section>
         </div>
+
         <div class="members">
-            <h2>Businesses</h2>
+            <h2>Business Spotlights</h2>
             <div class="spotlights">
                 <div class="spotlight-container"></div>
                 <a class="view-all-btn" href="directory.html#directory">View All Businesses</a>
             </div>
-            
         </div>
-
     </main>
+
     <footer>
         <div>
             <p><strong>Abuja Chamber of Commerce</strong></p>
@@ -114,16 +130,11 @@
             <p>info@abujacc.org</p>
             <p>(234) 907-977-0845</p>
         </div>
-
         <div class="social">
-            <a href="https://www.facebook.com/share/1CJKiAhdNP/" target="_blank"><img src="images/facebook.svg"
-                    alt="facebook" width="16" height="16"></a>
-            <a href="https://github.com/itzfrey" target="_blank"><img src="images/github-icon.svg" alt="github profile"
-                    width="16" height="16"></a>
-            <a href="https://www.linkedin.com/in/godfrey-eyo-66aa3a251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium="
-                target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
-            <a href="https://x.com/itzfrey?t=OYMBeGasE94Wpk3QaPZftA&s=09" target="_blank"><img
-                    src="images/twitter-x.svg" alt="twitter" width="16" height="16"></a>
+            <a href="https://www.facebook.com/share/1CJKiAhdNP/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
+            <a href="https://github.com/itzfrey" target="_blank"><img src="images/github-icon.svg" alt="github profile" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/godfrey-eyo-66aa3a251?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+            <a href="https://x.com/itzfrey?t=OYMBeGasE94Wpk3QaPZftA&s=09" target="_blank"><img src="images/twitter-x.svg" alt="twitter" width="16" height="16"></a>
         </div>
         <div>
             <p>WDD231 Class Project</p>
@@ -132,8 +143,6 @@
             <p>&copy; <span id="currentyear"></span> Abuja Chamber of Commerce</p>
             <p id="lastModified"></p>
         </div>
-
     </footer>
 </body>
-
 </html>
