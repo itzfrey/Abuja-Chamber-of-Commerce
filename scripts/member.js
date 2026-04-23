@@ -83,3 +83,22 @@ function showList() {
     display.classList.remove("grid");
 }
 
+// Live search filter
+const searchInput = document.getElementById('memberSearch');
+
+if (searchInput) {
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.member-card');
+
+        cards.forEach(card => {
+            const name = card.querySelector('h3')?.textContent.toLowerCase() || '';
+            const tagline = card.querySelector('.tagline')?.textContent.toLowerCase() || '';
+            const info = card.querySelector('.member-info')?.textContent.toLowerCase() || '';
+
+            const match = name.includes(query) || tagline.includes(query) || info.includes(query);
+            card.style.display = match ? '' : 'none';
+        });
+    });
+}
+
