@@ -1,0 +1,180 @@
+/* ============================================================
+   ABUJA CHAMBER OF COMMERCE — siteplan.css
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&family=Raleway:wght@100..900&display=swap');
+
+:root {
+  --blue-deep:  #003366;
+  --blue-mid:   #004d99;
+  --blue-light: #e8f0fb;
+  --light-gold: #DDA448;
+  --alice-blue: #E1F2FE;
+  --white:      #ffffff;
+  --off-white:  #f7f8fc;
+  --text-dark:  #0d1b2a;
+  --text-mid:   #3a4a5c;
+  --text-light: #6b7f96;
+  --border:     #d4dce8;
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --shadow-sm:  0 2px 8px rgba(0,51,102,0.08);
+  --shadow-md:  0 6px 24px rgba(0,51,102,0.13);
+  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: var(--off-white);
+  color: var(--text-dark);
+  line-height: 1.65;
+}
+
+/* ── Header ────────────────────────────────────────────────── */
+header {
+  background: linear-gradient(135deg, var(--blue-deep) 0%, var(--blue-mid) 100%);
+  padding: 36px 24px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--light-gold), var(--alice-blue), var(--light-gold));
+}
+header h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+header h1 span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--alice-blue);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* ── Main layout ───────────────────────────────────────────── */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 18px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Sections ──────────────────────────────────────────────── */
+section {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  padding: 24px 22px;
+  transition: box-shadow var(--transition);
+}
+section:hover { box-shadow: var(--shadow-md); }
+
+section h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--light-gold);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+section h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+section p {
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+}
+
+section ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+section ul li {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  padding: 10px 14px;
+  background: var(--off-white);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--light-gold);
+  line-height: 1.6;
+}
+section ul li strong { color: var(--blue-deep); }
+
+/* ── Design Brief (special section) ───────────────────────── */
+.design-brief {
+  border-top: 3px solid var(--light-gold);
+}
+.design-brief p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+.design-brief p:last-child { border-bottom: none; }
+.design-brief strong {
+  color: var(--blue-deep);
+  font-weight: 700;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+/* Color swatches auto-generated from text */
+.design-brief p:nth-child(2)::before { content: ''; display: inline-block; width: 18px; height: 18px; background: #004080; border-radius: 4px; border: 1px solid var(--border); flex-shrink: 0; }
+.design-brief p:nth-child(3)::before { content: ''; display: inline-block; width: 18px; height: 18px; background: #FFD700; border-radius: 4px; border: 1px solid var(--border); flex-shrink: 0; }
+.design-brief p:nth-child(4)::before { content: ''; display: inline-block; width: 18px; height: 18px; background: #F5F5F5; border-radius: 4px; border: 1px solid var(--border); flex-shrink: 0; }
+.design-brief p:nth-child(5)::before { content: ''; display: inline-block; width: 18px; height: 18px; background: #000000; border-radius: 4px; border: 1px solid var(--border); flex-shrink: 0; }
+
+/* ── Footer ────────────────────────────────────────────────── */
+footer {
+  background: linear-gradient(135deg, var(--blue-deep) 0%, #002244 100%);
+  text-align: center;
+  padding: 20px;
+}
+footer p {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.55);
+}
+
+/* ── Tablet+ ───────────────────────────────────────────────── */
+@media (min-width: 600px) {
+  header { padding: 48px 40px 36px; }
+  header h1 { font-size: 2rem; }
+  main { padding: 40px 32px 72px; gap: 24px; }
+  section { padding: 28px 28px; }
+}
+
+@media (min-width: 900px) {
+  header h1 { font-size: 2.4rem; }
+  main { padding: 48px 0 80px; }
+}

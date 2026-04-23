@@ -349,7 +349,7 @@ main > h1 {
   color: var(--blue-deep);
   padding: 22px 18px 6px;
   border-left: 4px solid var(--light-gold);
-  margin: 0 18px 0;
+  margin: 10px 18px 0;
 }
 body.dark-mode main > h1 { color: var(--alice-blue); }
 
