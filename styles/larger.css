@@ -46,6 +46,14 @@
   /* Directory hero */
   .hero { height: 220px; }
 
+  .hero-label h2 {
+    bottom: 30px;
+  }
+
+  .hero-label p {
+    bottom: 15px;
+  }
+
   /* Mission strip: row layout */
   .mission-strip {
     flex-direction: row;
