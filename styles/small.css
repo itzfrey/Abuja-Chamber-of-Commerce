@@ -178,7 +178,6 @@ body.dark-mode .dark-mood {
 .navigation ul li a:hover {
   background: rgba(255,255,255,0.06);
   color: var(--light-gold);
-  border-left-color: var(--alice-blue);
 }
 .navigation ul li.current a {
   color: var(--light-gold);
